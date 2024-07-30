@@ -13,5 +13,5 @@ sequenceDiagram
     deactivate server
 
 
-    Note right of browser: With this the javascript file reiterates the notes list and shows it in the HTML
+    Note right of browser: The Javascript file executes the event handler that reiterates the notes list and shows it in the HTML
 ```
