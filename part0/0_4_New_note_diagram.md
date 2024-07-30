@@ -1,9 +1,14 @@
-````
 ```mermaid
-graph TD;
 sequenceDiagram
-participant browser
-participant server
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->>browser: Status: code 302 Found / redirect URL Location: /notes
+    deactivate server
+
+    Note right of browser: The server asks for a reload of the notes page
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -28,12 +33,4 @@ participant server
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-````
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
 ```
