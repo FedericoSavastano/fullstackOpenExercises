@@ -1,6 +1,6 @@
-```mermaid
 #Exercise 0.5: Single Page App diagram
 
+```mermaid
 sequenceDiagram
     participant browser
     participant server
