@@ -34,8 +34,8 @@ const App = () => {
         newPoints[selected] += 1;
 
         let maxNumber = Math.max(...newPoints);
-        setIndexOfBestAnecdote(newPoints.indexOf(maxNumber));
 
+        setIndexOfBestAnecdote(newPoints.indexOf(maxNumber));
         setPoints(newPoints);
     };
 
@@ -43,13 +43,16 @@ const App = () => {
         <div>
             <h2>Anecdote of the day</h2>
             <p> {anecdotes[selected]}</p>
-            <p>this anecdote has {points[selected]} points</p>
+            <p>has {points[selected]} points</p>
             <button onClick={handleClickVote}>Vote</button>
             <button onClick={handleClickNextAnecdote}>Next Anecdote</button>
 
             <h2>Anecdote with most votes</h2>
             {indexOfBestAnecdote > -1 ? (
-                <p>{anecdotes[indexOfBestAnecdote]} </p>
+                <>
+                    <p>{anecdotes[indexOfBestAnecdote]} </p>
+                    <p>has {points[indexOfBestAnecdote]} points</p>
+                </>
             ) : (
                 <p>No votes yet</p>
             )}
