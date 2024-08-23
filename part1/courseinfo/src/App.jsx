@@ -34,7 +34,7 @@ const App = () => {
     const Part = ({ part }) => {
         return (
             <p>
-                {part.name} {part.excercise}
+                {part.name} {part.exercises}
             </p>
         );
     };
