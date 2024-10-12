@@ -151,10 +151,11 @@ const App = () => {
             })
             .catch((error) => {
                 console.log(error);
-
-                setMessage(
-                    `error: the person '${newName}' could not be registered. try again`
-                );
+               
+                setMessage(error.response.data.error)
+                // setMessage(
+                //     `error: the person '${newName}' could not be registered. try again`
+                // );
                 setTimeout(() => {
                     setMessage(null);
                 }, 5000);
