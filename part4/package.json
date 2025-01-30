@@ -1,0 +1,27 @@
+{
+    "name": "part4_excercises_practice",
+    "version": "1.0.0",
+    "description": "fullstack open part 4 exercises",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node index.js",
+        "dev": "cross-env NODE_ENV=development nodemon index.js",
+        "test": "cross-env NODE_ENV=test node --test"
+    },
+    "author": "federico savastano",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "express-async-errors": "^3.1.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.8.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.7",
+        "supertest": "^7.0.0"
+    }
+}
